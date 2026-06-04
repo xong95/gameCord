@@ -1,0 +1,26 @@
+{
+  "name": "gamecord",
+  "version": "1.0.0",
+  "description": "메이플스토리 강화 시뮬레이터 - Claude AI 기반",
+  "private": true,
+  "workspaces": [
+    "web",
+    "functions",
+    "desktop"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:web dev:functions",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:functions": "npm run dev --workspace=functions",
+    "dev:desktop": "npm run dev --workspace=desktop",
+    "build": "npm-run-all build:web build:functions build:desktop",
+    "build:web": "npm run build --workspace=web",
+    "build:functions": "npm --workspace=functions",
+    "build:desktop": "npm run build --workspace=desktop",
+    "lint": "npm run lint --workspace=web",
+    "install:all": "npm install && npm install --workspace=web && npm install --workspace=functions && npm install --workspace=desktop"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

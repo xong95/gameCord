@@ -1,0 +1,22 @@
+{
+  "name": "gamecord-desktop",
+  "version": "1.0.0",
+  "description": "gameCord Desktop App - In-game overlay enhancement simulator",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "electron": "^32.0.0",
+    "electron-builder": "^25.1.1",
+    "vite": "^8.0.12"
+  }
+}
