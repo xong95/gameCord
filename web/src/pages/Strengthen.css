@@ -1,0 +1,414 @@
+.strengthen-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    sans-serif;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.strengthen-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+}
+
+/* 입력 섹션 */
+.input-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.input-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-with-slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.level-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.unit {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #ddd;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+}
+
+/* 옵션 섹션 */
+.options-section {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.options-section h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+}
+
+.checkbox-item input {
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.checkbox-label {
+  user-select: none;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 20px;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* 결과 섹션 */
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summary-card,
+.details-card,
+.tips-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h2,
+.details-card h2,
+.tips-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.summary-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.summary-item .label {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summary-item .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.summary-item .value.highlight {
+  color: #667eea;
+  font-size: 20px;
+}
+
+.summary-item .value.warning {
+  color: #ff6b6b;
+}
+
+.rating-1,
+.rating-2 {
+  color: #ff6b6b;
+}
+
+.rating-3 {
+  color: #ffa500;
+}
+
+.rating-4,
+.rating-5 {
+  color: #51cf66;
+}
+
+.cost-breakdown {
+  background: #f0f7ff;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.cost-breakdown p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 테이블 */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.details-table thead {
+  background: #f9f9f9;
+  border-bottom: 2px solid #ddd;
+}
+
+.details-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.details-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.details-table tr.even {
+  background: #fafafa;
+}
+
+.details-table tr:hover {
+  background: #f0f7ff;
+}
+
+.details-table .level {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.details-table .rate {
+  color: #333;
+  font-weight: 500;
+}
+
+.details-table .cost {
+  color: #333;
+}
+
+.details-table .cost.highlight {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.details-table .breath {
+  color: #666;
+}
+
+.details-table .attempts {
+  color: #999;
+}
+
+/* 팁 카드 */
+.tips-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+  border-left: 4px solid #667eea;
+}
+
+.tips-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tips-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .strengthen-content {
+    grid-template-columns: 1fr;
+  }
+
+  .input-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .strengthen-content {
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input-section,
+  .summary-card,
+  .details-card,
+  .tips-card {
+    padding: 20px;
+  }
+
+  .details-table {
+    font-size: 12px;
+  }
+
+  .details-table th,
+  .details-table td {
+    padding: 8px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
