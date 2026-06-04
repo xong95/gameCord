@@ -49,7 +49,7 @@ export default function Login() {
     <div className="login-container">
       <div className="login-card">
         <h1>gameCord</h1>
-        <p className="subtitle">메이플스토리 강화 시뮬레이터</p>
+        <p className="subtitle">메이플스토리 어시스턴트</p>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">

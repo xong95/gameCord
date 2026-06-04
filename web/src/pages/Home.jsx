@@ -37,7 +37,7 @@ export default function Home() {
       <header className="home-header">
         <div className="header-content">
           <h1>gameCord</h1>
-          <p>메이플스토리 강화 시뮬레이터</p>
+          <p>메이플스토리 어시스턴트</p>
         </div>
         <div className="user-info">
           {user ? (
@@ -74,7 +74,7 @@ export default function Home() {
       </main>
 
       <footer className="home-footer">
-        <p>© 2026 gameCord. 메이플스토리 강화 시뮬레이터</p>
+        <p>© 2026 gameCord. 메이플스토리 어시스턴트</p>
       </footer>
     </div>
   );
