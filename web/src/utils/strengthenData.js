@@ -1,5 +1,5 @@
-// 강화 단계별 데이터
-export const STRENGTHEN_DATA = {
+// 스타포스 강화 데이터
+export const STARFORCE_DATA = {
   5: { successRate: 0.95, mesoBase: 50000000, breath: 50, failureType: -1, protectCost: 10000000 },
   6: { successRate: 0.95, mesoBase: 100000000, breath: 60, failureType: -1, protectCost: 20000000 },
   7: { successRate: 0.90, mesoBase: 150000000, breath: 70, failureType: -1, protectCost: 30000000 },
@@ -22,6 +22,80 @@ export const STRENGTHEN_DATA = {
   24: { successRate: 0.20, mesoBase: 100000000000, breath: 240, failureType: -3, protectCost: 15000000000 },
   25: { successRate: 0.15, mesoBase: 150000000000, breath: 250, failureType: -3, protectCost: 20000000000 },
 };
+
+// 블랙 숨결 강화 데이터 (스타포스와 비슷하지만 숨결 기반)
+export const BLACK_BREATH_DATA = {
+  5: { successRate: 0.98, breathCost: 10, failureType: 0 },
+  6: { successRate: 0.98, breathCost: 10, failureType: 0 },
+  7: { successRate: 0.95, breathCost: 12, failureType: 0 },
+  8: { successRate: 0.95, breathCost: 12, failureType: 0 },
+  9: { successRate: 0.95, breathCost: 14, failureType: 0 },
+  10: { successRate: 0.90, breathCost: 16, failureType: -1 },
+  11: { successRate: 0.90, breathCost: 18, failureType: -1 },
+  12: { successRate: 0.90, breathCost: 20, failureType: -1 },
+  13: { successRate: 0.85, breathCost: 22, failureType: -1 },
+  14: { successRate: 0.80, breathCost: 24, failureType: -1 },
+  15: { successRate: 0.75, breathCost: 26, failureType: -1 },
+};
+
+// 큐브 (확률 변경)
+export const CUBE_DATA = {
+  normal: [
+    { rank: '일반', successRate: 0.70, cost: 100000 },
+    { rank: '레어', successRate: 0.40, cost: 500000 },
+    { rank: '에픽', successRate: 0.15, cost: 3000000 },
+  ],
+  premium: [
+    { rank: '일반', successRate: 0.80, cost: 200000 },
+    { rank: '레어', successRate: 0.50, cost: 1000000 },
+    { rank: '에픽', successRate: 0.25, cost: 5000000 },
+  ]
+};
+
+// 메이플 큐브
+export const MAPLE_CUBE_DATA = {
+  normal: [
+    { rank: '일반', successRate: 0.85, cost: 300000 },
+    { rank: '레어', successRate: 0.60, cost: 1500000 },
+    { rank: '에픽', successRate: 0.30, cost: 7500000 },
+  ],
+  premium: [
+    { rank: '일반', successRate: 0.95, cost: 600000 },
+    { rank: '레어', successRate: 0.70, cost: 3000000 },
+    { rank: '에픽', successRate: 0.40, cost: 15000000 },
+  ]
+};
+
+// 착용 주문서 (장비 강화)
+export const EQUIPMENT_SCROLL_DATA = {
+  1: { successRate: 0.95, cost: 5000, failureType: 0 },
+  2: { successRate: 0.90, cost: 10000, failureType: 0 },
+  3: { successRate: 0.85, cost: 20000, failureType: 0 },
+  4: { successRate: 0.80, cost: 50000, failureType: -1 },
+  5: { successRate: 0.70, cost: 100000, failureType: -1 },
+  6: { successRate: 0.60, cost: 200000, failureType: -1 },
+  7: { successRate: 0.50, cost: 500000, failureType: -2 },
+  8: { successRate: 0.40, cost: 1000000, failureType: -2 },
+  9: { successRate: 0.30, cost: 2000000, failureType: -2 },
+  10: { successRate: 0.20, cost: 5000000, failureType: -3 },
+};
+
+// 재련 (심볼 강화)
+export const RECLAMATION_DATA = {
+  1: { successRate: 1.0, cost: 10000000 },
+  2: { successRate: 1.0, cost: 20000000 },
+  3: { successRate: 1.0, cost: 30000000 },
+  4: { successRate: 0.95, cost: 50000000 },
+  5: { successRate: 0.90, cost: 100000000 },
+  6: { successRate: 0.85, cost: 200000000 },
+  7: { successRate: 0.80, cost: 300000000 },
+  8: { successRate: 0.70, cost: 500000000 },
+  9: { successRate: 0.60, cost: 1000000000 },
+  10: { successRate: 0.50, cost: 2000000000 },
+};
+
+// 이전 호환성
+export const STRENGTHEN_DATA = STARFORCE_DATA;
 
 // 강화 계산 함수들
 export const calculateStrengthenCosts = (fromLevel, toLevel, options = {}) => {
