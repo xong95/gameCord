@@ -10,7 +10,7 @@ export default function Home() {
     {
       id: 'strengthen',
       title: '강화 확률 계산',
-      description: '스타포스, 숨결 강화 비용과 성공률을 ㄴㅁㅇ람노ㅓ라ㅣ;ㅈㄷ3ㅗ ㅏㅐ;23ㅗㄱ ',
+      description: '스타포스, 숨결 강화 비용과 성공률을 계산합니다',
       icon: '⚡',
       color: '#FF6B6B',
     },
