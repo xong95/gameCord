@@ -16,10 +16,10 @@ const createWindow = () => {
     },
   });
 
-  const isDev = process.env.NODE_ENV === 'development';
+  const isDev = !app.isPackaged;
   const startUrl = isDev
-    ? 'http://localhost:5173'
-    : `file://${path.join(__dirname, '../dist/index.html')}`;
+      ? 'http://localhost:5173'
+      : `file://${path.join(__dirname, '../dist/index.html')}`;
 
   mainWindow.loadURL(startUrl);
 

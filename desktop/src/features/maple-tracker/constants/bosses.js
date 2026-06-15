@@ -1,0 +1,56 @@
+// 보스 그룹 데이터 (난이도 선택 UI용)
+export const BOSS_GROUPS = {
+    daily: [
+        { name:"자쿰",       diffs:[{diff:"이지",crystal:114000},{diff:"노멀",crystal:349000}] },
+        { name:"혼테일",     diffs:[{diff:"이지",crystal:502000},{diff:"노멀",crystal:576000},{diff:"카오스",crystal:770000}] },
+        { name:"매그너스",   diffs:[{diff:"이지",crystal:411000},{diff:"노멀",crystal:1480000}] },
+        { name:"힐라",       diffs:[{diff:"노멀",crystal:455000}] },
+        { name:"카응",       diffs:[{diff:"노멀",crystal:712000}] },
+        { name:"파풀라투스", diffs:[{diff:"이지",crystal:390000},{diff:"노멀",crystal:1520000}] },
+        { name:"피에르",     diffs:[{diff:"노멀",crystal:551000}] },
+        { name:"반반",       diffs:[{diff:"노멀",crystal:551000}] },
+        { name:"블러디퀸",   diffs:[{diff:"노멀",crystal:551000}] },
+        { name:"벨룸",       diffs:[{diff:"노멀",crystal:551000}] },
+        { name:"반 레온",    diffs:[{diff:"이지",crystal:602000},{diff:"노멀",crystal:830000},{diff:"하드",crystal:1390000}] },
+        { name:"아카이럼",   diffs:[{diff:"이지",crystal:656000},{diff:"노멀",crystal:1430000}] },
+        { name:"핑크빈",     diffs:[{diff:"노멀",crystal:799000}] },
+    ],
+    weekly: [
+        { name:"자쿰",              diffs:[{diff:"카오스",crystal:8080000}] },
+        { name:"매그너스",          diffs:[{diff:"하드",crystal:8560000}] },
+        { name:"힐라",              diffs:[{diff:"하드",crystal:5750000}] },
+        { name:"파풀라투스",        diffs:[{diff:"카오스",crystal:13800000}] },
+        { name:"피에르",            diffs:[{diff:"카오스",crystal:8170000}] },
+        { name:"반반",              diffs:[{diff:"카오스",crystal:8150000}] },
+        { name:"블러디퀸",          diffs:[{diff:"카오스",crystal:8140000}] },
+        { name:"벨룸",              diffs:[{diff:"카오스",crystal:9280000}] },
+        { name:"핑크빈",            diffs:[{diff:"카오스",crystal:6580000}] },
+        { name:"시그너스",          diffs:[{diff:"이지",crystal:4550000},{diff:"노멀",crystal:7500000}] },
+        { name:"스우",              diffs:[{diff:"노멀",crystal:17600000},{diff:"하드",crystal:54200000},{diff:"익스트림",crystal:604000000}] },
+        { name:"데미안",            diffs:[{diff:"노멀",crystal:18400000},{diff:"하드",crystal:51500000}] },
+        { name:"가디언 엔젤 슬라임",diffs:[{diff:"노멀",crystal:26800000},{diff:"카오스",crystal:79100000}] },
+        { name:"루시드",            diffs:[{diff:"이지",crystal:31400000},{diff:"노멀",crystal:37500000},{diff:"하드",crystal:66200000}] },
+        { name:"윌",                diffs:[{diff:"이지",crystal:34000000},{diff:"노멀",crystal:43300000},{diff:"하드",crystal:81200000}] },
+        { name:"더스크",            diffs:[{diff:"노멀",crystal:46300000},{diff:"카오스",crystal:73500000}] },
+        { name:"진 힐라",           diffs:[{diff:"노멀",crystal:74900000},{diff:"하드",crystal:112000000}] },
+        { name:"듄켈",              diffs:[{diff:"노멀",crystal:50000000},{diff:"하드",crystal:99400000}] },
+        { name:"세렌",              diffs:[{diff:"노멀",crystal:266000000},{diff:"하드",crystal:396000000},{diff:"익스트림",crystal:3150000000}] },
+        { name:"칼로스",            diffs:[{diff:"이지",crystal:311000000},{diff:"노멀",crystal:561000000},{diff:"카오스",crystal:1340000000},{diff:"익스트림",crystal:4320000000}] },
+        { name:"최초의 대적자",     diffs:[{diff:"이지",crystal:324000000},{diff:"노멀",crystal:589000000},{diff:"하드",crystal:1510000000},{diff:"익스트림",crystal:4960000000}] },
+        { name:"카링",              diffs:[{diff:"이지",crystal:419000000},{diff:"노멀",crystal:714000000},{diff:"하드",crystal:1830000000},{diff:"익스트림",crystal:5670000000}] },
+        { name:"찬란한 흉성",       diffs:[{diff:"노멀",crystal:658000000},{diff:"하드",crystal:2819000000}] },
+        { name:"림보",              diffs:[{diff:"노멀",crystal:1080000000},{diff:"하드",crystal:2510000000}] },
+        { name:"발드릭스",          diffs:[{diff:"노멀",crystal:1440000000},{diff:"하드",crystal:3240000000}] },
+        { name:"유피테르",          diffs:[{diff:"노멀",crystal:1700000000},{diff:"하드",crystal:5100000000}] },
+    ],
+    monthly: [
+        { name:"검은 마법사", diffs:[{diff:"하드",crystal:700000000},{diff:"익스트림",crystal:9200000000}] },
+    ],
+};
+
+// 보스명 매칭용 flat 구조 (조회/수정 탭에서 사용)
+export const BOSSES = {
+    daily:   BOSS_GROUPS.daily.flatMap(b => b.diffs.map(d => ({ name:`${b.name} (${d.diff})`, crystal:d.crystal }))),
+    weekly:  BOSS_GROUPS.weekly.flatMap(b => b.diffs.map(d => ({ name:`${b.name} (${d.diff})`, crystal:d.crystal }))),
+    monthly: BOSS_GROUPS.monthly.flatMap(b => b.diffs.map(d => ({ name:`${b.name} (${d.diff})`, crystal:d.crystal }))),
+};
